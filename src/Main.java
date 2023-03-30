@@ -7,17 +7,18 @@ public class Main {
          mostrar los datos de cada usuario ( nombre, edad y sexo).
          */
 
-        //String N = JOptionPane.showInputDialog("Ingrese el tamaño de datos");
-       // int tamanio=Integer.parseInt(N);
+        String N = JOptionPane.showInputDialog("Ingrese el tamaño de datos");
+        int tamanio=Integer.parseInt(N);
+
         String name;
         int edad;
         char genero;
 
-        String names[] = new String[3];
-        int edades[] = new int[3];
-        char generos[] = new char[3];
+        String names[] = new String[tamanio];
+        int edades[] = new int[tamanio];
+        char generos[] = new char[tamanio];
 
-        for(int i=0;i<3;i++){
+        for(int i=0;i<tamanio;i++){
             names[i] = JOptionPane.showInputDialog("Ingresa el nombre: ");
 
             String ed = JOptionPane.showInputDialog("Igrese su edad: ");
@@ -30,7 +31,7 @@ public class Main {
         System.out.println("Nombre   | Edades | Generos");
         System.out.println("----------------------------");
 
-        for(int i=0;i<3;i++){
+        for(int i=0;i<tamanio;i++){
             System.out.println("Nombre "+names[i]+"=>"+edades[i]+" = "+generos[i]);
         }
     }
